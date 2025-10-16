@@ -14,6 +14,50 @@
 };
 
 / {
+    macros {
+        window_bottom_left: window_bottom_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(J))>;
+            label = "WINDOW_BOTTOM_LEFT";
+        };
+
+        window_bottom_right: window_bottom_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(K))>;
+            label = "WINDOW_BOTTOM_RIGHT";
+        };
+
+        window_top_left: window_top_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(U))>;
+            label = "WINDOW_TOP_LEFT";
+        };
+
+        window_top_right: window_top_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LC(I))>;
+            label = "WINDOW_TOP_RIGHT";
+        };
+
+        window_left: window_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(LEFT_ARROW))>;
+            label = "WINDOW_LEFT";
+        };
+
+        window_right: window_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LC(RIGHT_ARROW))>;
+            label = "WINDOW_RIGHT";
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -50,10 +94,10 @@
             //                    | GUI |     | SPC   |        | ENT   |     | ALT |
 
             bindings = <
-&kp TAB    &kp N1        &kp N2           &kp N3        &kp N4        &kp N5          &kp LCTRL  &kp RCTRL  &kp N6    &kp N7    &kp N8     &kp N9     &kp N0  &kp BSPC
-&kp LCTRL  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LALT   &kp RALT   &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &trans  &trans
-&kp LSHFT  &bt BT_CLR    &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                        &trans    &trans    &trans     &trans     &trans  &trans
-                                          &kp LGUI      &trans        &kp SPACE                             &kp LGUI  &trans    &kp SPACE
+&kp TAB    &kp N1        &kp N2           &kp N3        &kp N4        &kp N5          &kp LCTRL  &kp RCTRL  &kp N6        &kp N7    &kp N8     &kp N9         &kp N0               &kp BSPC
+&kp LCTRL  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LALT   &kp RALT   &kp LEFT      &kp DOWN  &kp UP     &kp RIGHT      &window_top_left     &window_top_right
+&kp LSHFT  &bt BT_CLR    &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                        &window_left  &trans    &trans     &window_right  &window_bottom_left  &window_bottom_right
+                                          &kp LGUI      &trans        &kp SPACE                             &kp LGUI      &trans    &kp SPACE
             >;
         };
 
