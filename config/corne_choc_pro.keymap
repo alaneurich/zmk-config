@@ -147,6 +147,27 @@
 
             label = "DE_UE_UPPER";
         };
+
+        window_fullscreen: window_fullscreen {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LA(ENTER))>;
+            label = "WINDOW_FULLSCREEN";
+        };
+
+        desk_left: desk_left {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(LEFT)>;
+            label = "DESK_LEFT";
+        };
+
+        desk_right: desk_right {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(RIGHT)>;
+            label = "DESK_RIGHT";
+        };
     };
 
     behaviors {
@@ -222,7 +243,7 @@
 &kp TAB    &kp Q             &kp W            &kp E              &kp R         &kp T      &kp C_MUTE        &kp C_PP           &kp Y    &kp U         &kp I              &kp O            &kp P                     &kp BSPC
 &kp LCTRL  &hml LEFT_META A  &hml LEFT_ALT S  &hml LEFT_SHIFT D  &hml LCTRL F  &kp G      &kp LEFT_BRACKET  &kp RIGHT_BRACKET  &kp H    &hmr LCTRL J  &hmr LEFT_SHIFT K  &hmr LEFT_ALT L  &hmr LEFT_META SEMICOLON  &kp SQT
 &kp LSHFT  &kp Z             &kp X            &kp C              &kp V         &kp B                                           &kp N    &kp M         &kp COMMA          &kp DOT          &kp FSLH                  &kp ESC
-                                              &kp LGUI           &mo 1         &kp SPACE                                       &kp RET  &mo 2         &kp RALT
+                                              &mo 3              &mo 1         &kp SPACE                                       &kp RET  &mo 2         &kp RALT
             >;
 
             sensor-bindings =
@@ -266,13 +287,13 @@
             >;
         };
 
-        extra_layer_2 {
-            display-name = "EXTRA 2";
+        navigtion {
+            display-name = "NAVIGATION";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans                  &trans  &trans  &trans
+&trans  &trans      &trans  &trans  &trans       &trans  &trans  &trans  &trans              &trans        &trans               &trans                &trans         &trans
+&trans  &desk_left  &trans  &trans  &desk_right  &trans  &trans  &trans  &trans              &window_left  &window_top_left     &window_top_right     &window_right  &trans
+&trans  &trans      &trans  &trans  &trans       &trans                  &trans              &trans        &window_bottom_left  &window_bottom_right  &trans         &trans
+                            &trans  &trans       &trans                  &window_fullscreen  &trans        &trans
             >;
         };
 
