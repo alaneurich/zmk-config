@@ -91,6 +91,62 @@
 
             label = "DE_AE_UPPER";
         };
+
+        de_oe_lower: de_oe_lower {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp F &kp N6>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "DE_OE_LOWER";
+        };
+
+        de_oe_upper: de_oe_upper {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp D &kp N6>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "DE_OE_UPPER";
+        };
+
+        de_ue_lower: de_ue_lower {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp F &kp C>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "DE_UE_LOWER";
+        };
+
+        de_ue_upper: de_ue_upper {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp D &kp C>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "DE_UE_UPPER";
+        };
     };
 
     behaviors {
@@ -126,6 +182,24 @@
             compatible = "zmk,behavior-mod-morph";
             label = "DE_AE_SHIFTED";
             bindings = <&de_ae_lower>, <&de_ae_upper>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        de_oe_shifted: de_oe_shifted {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DE_OE_SHIFTED";
+            bindings = <&de_oe_lower>, <&de_oe_upper>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        de_ue_shifted: de_ue_shifted {
+            compatible = "zmk,behavior-mod-morph";
+            label = "DE_UE_SHIFTED";
+            bindings = <&de_ue_lower>, <&de_ue_upper>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -185,10 +259,10 @@
             //                    | GUI |     | SPC |               | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL        &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp LCTRL  &kp RCTRL  &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &de_ae_shifted  &trans  &trans    &trans    &trans     &kp LALT   &kp RALT   &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans          &trans  &trans    &trans    &trans                           &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                                   &kp LGUI  &trans    &kp SPACE                        &kp RET    &trans     &kp RALT
+&kp TAB    &kp EXCL        &kp AT          &kp HASH        &kp DLLR  &kp PRCNT  &kp LCTRL  &kp RCTRL  &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
+&kp LCTRL  &de_ae_shifted  &de_oe_shifted  &de_ue_shifted  &trans    &trans     &kp LALT   &kp RALT   &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
+&kp LSHFT  &trans          &trans          &trans          &trans    &trans                           &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+                                           &kp LGUI        &trans    &kp SPACE                        &kp RET    &trans     &kp RALT
             >;
         };
 
