@@ -353,10 +353,10 @@
         navigation_layer {
             display-name = "NAVIGATION";
             bindings = <
-&trans  &trans        &trans               &trans                &trans         &trans  &trans  &trans  &trans              &trans          &trans    &trans        &trans       &trans
-&trans  &window_left  &window_top_left     &window_top_right     &window_right  &trans  &trans  &trans  &trans              &kp LEFT_ARROW  &kp DOWN  &kp UP_ARROW  &kp RIGHT    &trans
-&trans  &trans        &window_bottom_left  &window_bottom_right  &trans         &trans                  &trans              &desk_left      &trans    &trans        &desk_right  &trans
-                                           &trans                &trans         &trans                  &window_fullscreen  &trans          &trans
+&trans  &trans        &trans               &trans                &trans         &trans              &trans  &trans  &trans    &trans          &trans        &trans     &trans  &trans
+&trans  &window_left  &window_top_left     &window_top_right     &window_right  &trans              &trans  &trans  &kp LEFT  &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans  &trans
+&trans  &desk_left    &window_bottom_left  &window_bottom_right  &desk_right    &trans                              &trans    &trans          &trans        &trans     &trans  &trans
+                                           &trans                &trans         &window_fullscreen                  &trans    &trans          &trans
             >;
         };
 
