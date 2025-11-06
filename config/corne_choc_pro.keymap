@@ -320,10 +320,10 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB  &kp Q  &kp W             &kp E            &kp R         &kp T        &kp C_MUTE        &selection_screenshot  &kp Y        &kp U           &kp I            &kp O             &kp P          &kp BSPC
-&trans   &kp A  &hml LEFT_META S  &hml LEFT_ALT D  &hml LCTRL F  &kp G        &kp LEFT_BRACKET  &kp RIGHT_BRACKET      &kp H        &hmr LCTRL J    &hmr LEFT_ALT K  &hmr LEFT_META L  &kp SEMICOLON  &kp SQT
-&trans   &kp Z  &kp X             &kp C            &kp V         &kp B                                                 &kp N        &kp M           &kp COMMA        &kp DOT           &kp FSLH       &trans
-                                  &mo 3            &lt 2 ESC     &lt 1 SPACE                                           &lt 2 ENTER  &kp LEFT_SHIFT  &mo 4
+&kp TAB  &kp Q              &kp W             &kp E            &kp R         &kp T        &kp C_MUTE        &selection_screenshot  &kp Y        &kp U           &kp I            &kp O             &kp P                      &kp BSPC
+&trans   &hml LEFT_SHIFT A  &hml LEFT_META S  &hml LEFT_ALT D  &hml LCTRL F  &kp G        &kp LEFT_BRACKET  &kp RIGHT_BRACKET      &kp H        &hmr LCTRL J    &hmr LEFT_ALT K  &hmr LEFT_META L  &hmr LEFT_SHIFT SEMICOLON  &kp SQT
+&trans   &kp Z              &kp X             &kp C            &kp V         &kp B                                                 &kp N        &kp M           &kp COMMA        &kp DOT           &kp FSLH                   &trans
+                                              &mo 3            &lt 2 ESC     &lt 1 SPACE                                           &lt 2 ENTER  &kp LEFT_SHIFT  &mo 4
             >;
 
             sensor-bindings =
@@ -343,10 +343,10 @@
             //                    | GUI |     | SPC |               | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL        &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &kp LCTRL  &kp RCTRL  &kp CARET  &de_ue_shifted  &kp ASTRK  &de_oe_shifted  &trans    &kp BSPC
-&kp LCTRL  &de_ae_shifted  &trans  &trans    &trans    &trans     &kp LALT   &kp RALT   &kp MINUS  &kp EQUAL       &kp LBKT   &kp RBKT        &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans          &trans  &trans    &trans    &trans                           &kp UNDER  &kp PLUS        &kp LBRC   &kp RBRC        &trans    &kp TILDE
-                                   &kp LGUI  &trans    &kp SPACE                        &kp RET    &trans          &kp RALT
+&trans     &kp EXCL        &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &trans  &trans  &kp CARET  &de_ue_shifted  &kp ASTRK  &de_oe_shifted  &trans    &kp BSPC
+&kp LCTRL  &de_ae_shifted  &trans  &trans    &trans    &trans     &trans  &trans  &kp MINUS  &kp EQUAL       &kp LBKT   &kp RBKT        &kp BSLH  &kp GRAVE
+&trans     &trans          &trans  &trans    &trans    &trans                     &kp UNDER  &kp PLUS        &kp LBRC   &kp RBRC        &trans    &kp TILDE
+                                   &trans    &trans    &trans                     &trans     &trans          &trans
             >;
         };
 
