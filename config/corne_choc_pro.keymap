@@ -300,9 +300,57 @@
 
         mouse_layer {
             bindings = <&mo 5>;
-            key-positions = <17 18>;
+            key-positions = <40 41>;
             timeout-ms = <18>;
             require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+
+        bracket_open {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <9 10>;
+            timeout-ms = <18>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+
+        bracket_close {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <10 11>;
+            timeout-ms = <18>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+
+        brace_open {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <35 36>;
+            timeout-ms = <18>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+
+        brace_close {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <36 37>;
+            timeout-ms = <18>;
+            require-prior-idle-ms = <150>;
+            layers = <0>;
+        };
+
+        underscore {
+            bindings = <&kp UNDERSCORE>;
+            key-positions = <35 23>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <50>;
+            layers = <0>;
+        };
+
+        minus {
+            bindings = <&kp MINUS>;
+            key-positions = <34 22>;
+            timeout-ms = <30>;
+            require-prior-idle-ms = <50>;
             layers = <0>;
         };
     };
