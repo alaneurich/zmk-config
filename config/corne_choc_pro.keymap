@@ -176,6 +176,20 @@
             bindings = <&kp LS(LG(N4))>;
             label = "SELECTION_SCREENHOT";
         };
+
+        de_sharp_s: de_sharp_s {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LALT>,
+                <&macro_tap>,
+                <&kp N0 &kp N0 &kp D &kp F>,
+                <&macro_release>,
+                <&kp LALT>;
+
+            label = "DE_SHARP_S";
+        };
     };
 
     behaviors {
@@ -391,19 +405,19 @@
             //                    | GUI |     | SPC |               | ENT |     | ALT |
 
             bindings = <
-&trans     &kp EXCL        &kp AT  &kp HASH  &kp DLLR  &kp PRCNT  &trans  &trans  &kp CARET  &de_ue_shifted  &kp ASTRK  &de_oe_shifted  &trans    &kp BSPC
-&kp LCTRL  &de_ae_shifted  &trans  &trans    &trans    &trans     &trans  &trans  &kp MINUS  &kp EQUAL       &kp LBKT   &kp RBKT        &kp BSLH  &kp GRAVE
-&trans     &trans          &trans  &trans    &trans    &trans                     &kp UNDER  &kp PLUS        &kp LBRC   &kp RBRC        &trans    &kp TILDE
-                                   &trans    &trans    &trans                     &trans     &trans          &trans
+&trans     &kp EXCL        &kp AT       &kp HASH  &kp DLLR  &kp PRCNT  &trans  &trans  &kp CARET  &de_ue_shifted  &kp ASTRK  &de_oe_shifted  &trans    &kp BSPC
+&kp LCTRL  &de_ae_shifted  &de_sharp_s  &trans    &trans    &trans     &trans  &trans  &kp MINUS  &kp EQUAL       &kp LBKT   &kp RBKT        &kp BSLH  &kp GRAVE
+&trans     &trans          &trans       &trans    &trans    &trans                     &kp UNDER  &kp PLUS        &kp LBRC   &kp RBRC        &trans    &kp TILDE
+                                        &trans    &trans    &trans                     &trans     &trans          &trans
             >;
         };
 
         navigation_layer {
             display-name = "NAVIGATION";
             bindings = <
-&trans  &trans        &trans               &trans                &trans         &trans  &trans  &trans  &trans              &trans          &trans        &trans     &trans  &trans
-&trans  &window_left  &window_top_left     &window_top_right     &window_right  &trans  &trans  &trans  &kp LEFT            &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT  &trans  &trans
-&trans  &desk_left    &window_bottom_left  &window_bottom_right  &desk_right    &trans                  &trans              &trans          &trans        &trans     &trans  &trans
+&trans  &trans        &trans               &trans                &trans         &trans  &trans  &trans  &kp LA(LEFT_ARROW)  &trans          &trans        &kp LA(RIGHT_ARROW)  &trans  &trans
+&trans  &window_left  &window_top_left     &window_top_right     &window_right  &trans  &trans  &trans  &kp LEFT            &kp DOWN_ARROW  &kp UP_ARROW  &kp RIGHT            &trans  &trans
+&trans  &desk_left    &window_bottom_left  &window_bottom_right  &desk_right    &trans                  &kp LG(LEFT_ARROW)  &trans          &trans        &kp LG(RIGHT)        &trans  &trans
                                            &trans                &trans         &trans                  &window_fullscreen  &trans          &trans
             >;
         };
