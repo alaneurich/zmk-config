@@ -58,23 +58,16 @@
             label = "WINDOW_RIGHT";
         };
 
-        de_ue: de_ue {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LA(U) &kp U>;
-            label = "DE_UE";
-        };
-
         de_ae_lower: de_ae {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LALT>,
+                <&kp RIGHT_ALT>,
                 <&macro_tap>,
                 <&kp N0 &kp N0 &kp E &kp N4>,
                 <&macro_release>,
-                <&kp LALT>;
+                <&kp RALT>;
 
             label = "DE_AE";
         };
@@ -84,11 +77,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LALT>,
+                <&kp RALT>,
                 <&macro_tap>,
                 <&kp N0 &kp N0 &kp C &kp N4>,
                 <&macro_release>,
-                <&kp LALT>;
+                <&kp RALT>;
 
             label = "DE_AE_UPPER";
         };
@@ -98,11 +91,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LALT>,
+                <&kp RALT>,
                 <&macro_tap>,
                 <&kp N0 &kp N0 &kp F &kp N6>,
                 <&macro_release>,
-                <&kp LALT>;
+                <&kp RALT>;
 
             label = "DE_OE_LOWER";
         };
@@ -112,11 +105,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LALT>,
+                <&kp RALT>,
                 <&macro_tap>,
                 <&kp N0 &kp N0 &kp D &kp N6>,
                 <&macro_release>,
-                <&kp LALT>;
+                <&kp RALT>;
 
             label = "DE_OE_UPPER";
         };
@@ -126,11 +119,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LALT>,
+                <&kp RALT>,
                 <&macro_tap>,
                 <&kp N0 &kp N0 &kp F &kp C>,
                 <&macro_release>,
-                <&kp LALT>;
+                <&kp RALT>;
 
             label = "DE_UE_LOWER";
         };
@@ -140,11 +133,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LALT>,
+                <&kp RALT>,
                 <&macro_tap>,
                 <&kp N0 &kp N0 &kp D &kp C>,
                 <&macro_release>,
-                <&kp LALT>;
+                <&kp RALT>;
 
             label = "DE_UE_UPPER";
         };
@@ -182,11 +175,11 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_press>,
-                <&kp LALT>,
+                <&kp RALT>,
                 <&macro_tap>,
                 <&kp N0 &kp N0 &kp D &kp F>,
                 <&macro_release>,
-                <&kp LALT>;
+                <&kp RALT>;
 
             label = "DE_SHARP_S";
         };
