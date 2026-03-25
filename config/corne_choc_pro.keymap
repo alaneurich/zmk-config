@@ -187,7 +187,13 @@
         hyper: hyper {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp LALT &kp LSHIFT &kp LCMD>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL &kp LGUI &kp LSHIFT &kp LALT>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&kp LCTRL &kp LCMD &kp LSHIFT &kp LALT>;
+
             label = "HYPER";
         };
     };
