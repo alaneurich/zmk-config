@@ -389,15 +389,15 @@
 
             bindings = <
 &kp TAB         &kp Q              &kp W             &kp E            &kp R         &kp T        &kp C_MUTE        &selection_screenshot  &kp Y        &kp U           &kp I            &kp O             &kp P                      &kp BSPC
-&kp LEFT_SHIFT  &hml LEFT_SHIFT A  &hml LEFT_META S  &hml LEFT_ALT D  &hml LCTRL F  &kp G        &kp LEFT_BRACKET  &kp RIGHT_BRACKET      &kp H        &hmr LCTRL J    &hmr LEFT_ALT K  &hmr LEFT_META L  &hmr LEFT_SHIFT SEMICOLON  &kp SQT
+&kp LEFT_SHIFT  &hml LEFT_SHIFT A  &hml LEFT_META S  &hml LEFT_ALT D  &hml LCTRL F  &kp G        &kp LEFT_BRACKET  &mo 4                  &kp H        &hmr LCTRL J    &hmr LEFT_ALT K  &hmr LEFT_META L  &hmr LEFT_SHIFT SEMICOLON  &kp SQT
 &hyper          &kp Z              &kp X             &kp C            &kp V         &kp B                                                 &kp N        &kp M           &kp COMMA        &kp DOT           &kp FSLH                   &kp RCMD
-                                                     &mo 3            &lt 2 ESC     &lt 1 SPACE                                           &lt 2 ENTER  &kp LEFT_SHIFT  &mo 4
+                                                     &mo 3            &lt 2 ESC     &lt 1 SPACE                                           &lt 2 ENTER  &kp LEFT_SHIFT  &mo 5
             >;
 
             sensor-bindings =
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>,
                 <&inc_dec_kp PG_UP PG_DN>,
-                <&inc_dec_kp C_BRI_DN C_BRI_UP>,
+                <&inc_dec_kp PG_DN PG_UP>,
                 <&inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
 
@@ -457,10 +457,10 @@
 
         mouse_layer {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &trans          &trans          &trans        &trans           &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans     &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                     &trans          &trans          &trans        &trans           &trans  &trans
-                        &trans  &trans  &mkp RCLK                  &mkp LCLK       &kp ESC         &trans
+&trans  &trans          &trans           &trans        &trans        &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LEFT_SHIFT  &kp RIGHT_SHIFT  &kp LEFT_ALT  &kp LEFT_GUI  &trans     &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans          &trans           &trans        &trans        &trans                     &trans  &trans  &trans  &trans  &trans  &trans
+                                         &trans        &mkp RCLK     &mkp LCLK                  &trans  &trans  &trans
             >;
 
             label = "MOUSE";
